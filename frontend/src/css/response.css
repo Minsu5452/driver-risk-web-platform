@@ -1,0 +1,85 @@
+@charset "utf-8";
+
+@media (max-width: 800px) {
+  /* Layout */
+  body {
+    min-width: auto;
+  }
+
+  .header .inner {
+    width: 100%;
+    height: 70px;
+    padding: 0 20px;
+  }
+  .header h1 {
+    margin-top: 22.5px;
+  }
+  .header .logo .w {
+    display: none;
+  }
+  .header .logo .m {
+    display: block;
+  }
+  .header .logo .m .logo-text {
+    padding: 0;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .c_wrap {
+    width: 100%;
+    padding: 0;
+  }
+  .c_wrap .layout {
+    display: block;
+  }
+  .c_wrap .layout .contents {
+    display: block;
+    padding: 0 20px 60px 20px;
+  }
+
+  .footer {
+    height: auto;
+    padding-bottom: 28px;
+    border-top: 10px solid #f5f5f5;
+  }
+  .footer::before {
+    content: none;
+  }
+  .footer .inner {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .footer h1 {
+    float: none;
+    width: 100%;
+    padding-top: 28px;
+  }
+  .footer .info {
+    float: none;
+    padding-top: 30px;
+    font-size: 12px;
+    line-height: 20px;
+  }
+  .footer .info .m_hide {
+    display: none;
+  }
+  .footer .info .m_show {
+    display: block;
+  }
+  /* Error page */
+  .ERROR {
+    width: 90%;
+    margin: 50px auto 0;
+  }
+  .ERROR h1 {
+    font-size: 30px;
+  }
+  .ERROR .box {
+    margin-top: 30px;
+  }
+  .ERROR .box p {
+    font-size: 16px;
+    justify-content: center;
+  }
+}

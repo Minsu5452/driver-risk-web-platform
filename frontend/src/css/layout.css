@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+body {
+  min-width: 1500px;
+}
+
+.header {
+  position: relative;
+}
+.header::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: #dedede;
+}
+.header > .inner {
+  position: relative;
+  width: 1400px;
+  height: 110px;
+  margin: 0 auto;
+  padding: 0 50px 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header h1 {
+  display: inline-block;
+  margin-top: 0;
+  flex-shrink: 0;
+}
+.header h1 a,
+.header h1 img {
+  display: block;
+}
+.header h1 img {
+  max-height: 110px;
+}
+.header .logo .logo-text {
+  display: block;
+  padding: 34px 0;
+  font-size: 22px;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+.header .logo .m {
+  display: none;
+}
+
+.header .gnb {
+  margin-left: 60px;
+}
+.header .gnb ul {
+  display: flex;
+  align-items: center;
+  gap: 98px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.header .gnb ul li a {
+  color: #666;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.25px;
+  white-space: nowrap;
+}
+.header .gnb ul li a.cur {
+  color: #222;
+}
+
+/* Header right area: AnalysisControls + Admin */
+.header .header-right {
+  margin-left: auto;
+  margin-right: -125px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.header .header-divider {
+  width: 1px;
+  height: 20px;
+  background: #dedede;
+}
+
+/* Admin toggle (login link / active mode button) */
+.header .admin-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 20px;
+  border-radius: 17px;
+  font-size: 14px;
+  line-height: 34px;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: inherit;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  color: #999;
+  background: transparent;
+  border: 1px solid #ddd;
+}
+.header .admin-toggle:hover {
+  color: #666;
+  border-color: #bbb;
+}
+.header .admin-toggle.login {
+  color: #666;
+  border-color: #ccc;
+  background: #f8f9fa;
+}
+.header .admin-toggle.login:hover {
+  color: #333;
+  border-color: #adb5bd;
+  background: #e9ecef;
+}
+.header .admin-toggle.active {
+  color: #343a40;
+  background: #f1f3f5;
+  border-color: #dee2e6;
+  font-weight: 600;
+}
+.header .admin-toggle.active::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #51cf66;
+  box-shadow: 0 0 0 2px rgba(81, 207, 102, 0.25);
+  flex-shrink: 0;
+}
+.header .admin-toggle.active:hover {
+  background: #e9ecef;
+  border-color: #ced4da;
+}
+.header .admin-toggle.active.open {
+  background: #e9ecef;
+  border-color: #ced4da;
+}
+.header .admin-chevron {
+  transition: transform 0.2s ease;
+  opacity: 0.5;
+  flex-shrink: 0;
+}
+.header .admin-toggle.active:hover .admin-chevron {
+  opacity: 0.8;
+}
+.header .admin-toggle.open .admin-chevron {
+  transform: rotate(180deg);
+  opacity: 0.8;
+}
+
+/* Admin dropdown */
+.header .admin-menu {
+  position: relative;
+}
+.header .admin-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 148px;
+  background: #fff;
+  border: 1px solid #e9ecef;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  padding: 4px 0;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(-6px);
+  pointer-events: none;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+.header .admin-dropdown.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.header .admin-dropdown a,
+.header .admin-dropdown button {
+  display: block;
+  width: 100%;
+  padding: 9px 16px;
+  font-size: 13px;
+  color: #495057;
+  text-decoration: none;
+  text-align: left;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: background 0.1s ease, color 0.1s ease;
+}
+.header .admin-dropdown a:hover,
+.header .admin-dropdown button:hover {
+  background: #f1f3f5;
+  color: #222;
+}
+.header .admin-dropdown-sep {
+  height: 1px;
+  margin: 4px 12px;
+  background: #e9ecef;
+}
+
+.container {
+  min-height: calc(100vh - 300px);
+}
+.c_wrap {
+  width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+.c_wrap .layout {
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.footer {
+  position: relative;
+  height: 180px;
+}
+.footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 1px;
+  background: #ccc;
+}
+.footer .inner {
+  position: relative;
+  width: 1400px;
+  margin: 0 auto;
+  padding: 0 50px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.footer .inner::after {
+  display: none;
+}
+.footer h1 {
+  float: none;
+  width: auto;
+  margin-right: 48px;
+  padding-top: 0;
+}
+.footer h1 .footer-logo-text {
+  font-size: 16px;
+  font-weight: 700;
+  color: #666;
+  white-space: nowrap;
+}
+.footer h1 .m {
+  display: none;
+}
+.footer .info {
+  float: none;
+  padding-top: 0;
+  color: #888;
+  font-size: 16px;
+  line-height: 26px;
+}
+.footer .info .copy {
+  margin-top: 12px;
+}
+.footer .info .m_show {
+  display: none;
+}
+/* Page transition */
+.page-content {
+  min-height: calc(100vh - 290px);
+  animation: pageFadeIn 0.25s ease-out;
+}
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Logout overlay */
+.logout-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(0);
+  transition: background 0.4s ease, backdrop-filter 0.4s ease;
+}
+.logout-overlay.overlay {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(4px);
+}
+.logout-overlay.done {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(0);
+  pointer-events: none;
+}
+.logout-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  animation: logoutCardIn 0.5s ease forwards;
+}
+.logout-overlay.done .logout-card {
+  animation: logoutCardOut 0.5s ease forwards;
+}
+.logout-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #343a40;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logout-text {
+  font-size: 15px;
+  font-weight: 500;
+  color: #495057;
+  letter-spacing: -0.2px;
+}
+.logout-bar {
+  width: 120px;
+  height: 3px;
+  border-radius: 2px;
+  background: #dee2e6;
+  overflow: hidden;
+}
+.logout-bar-fill {
+  height: 100%;
+  border-radius: 2px;
+  background: #495057;
+  animation: logoutProgress 1s ease forwards;
+}
+@keyframes logoutCardIn {
+  from { opacity: 0; transform: scale(0.9) translateY(8px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+@keyframes logoutCardOut {
+  from { opacity: 1; transform: scale(1) translateY(0); }
+  to   { opacity: 0; transform: scale(0.95) translateY(-6px); }
+}
+@keyframes logoutProgress {
+  from { width: 0; }
+  to   { width: 100%; }
+}

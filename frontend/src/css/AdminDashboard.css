@@ -1,0 +1,363 @@
+.admin-dashboard {
+    padding: 24px 0;
+    min-height: calc(100vh - 200px);
+    background-color: #f8f9fa;
+}
+
+.admin-section {
+    margin-bottom: 24px;
+}
+
+.file-list {
+    margin-top: 12px;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    background: #f1f3f5;
+    border-radius: 4px;
+    margin-bottom: 4px;
+}
+
+/* Upload file types guide */
+.upload-file-types-guide {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.upload-file-types-guide .file-type-chip {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px 4px 4px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+}
+
+/* Upload result list */
+.upload-result-list {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-top: 4px;
+}
+
+.upload-result-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.upload-result-row.error {
+    opacity: 0.7;
+}
+
+/* Version table */
+.version-table {
+    width: 100%;
+}
+
+.version-active-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 2px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.version-active-badge.active {
+    background: #d3f9d8;
+    color: #2b8a3e;
+}
+
+.version-active-badge.inactive {
+    background: #f1f3f5;
+    color: #868e96;
+}
+
+/* Disk usage bar */
+.disk-usage-bar {
+    margin-top: 16px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.disk-usage-bar .disk-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #495057;
+    margin-bottom: 8px;
+}
+
+.disk-usage-bar .disk-value {
+    font-weight: 600;
+}
+
+/* Dataset table */
+.dataset-meta-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.dataset-meta-cell .meta-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+}
+
+.dataset-meta-cell .meta-row .meta-domain {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.dataset-meta-cell .meta-row .meta-domain.domain-a {
+    background: #4c6ef5;
+}
+
+.dataset-meta-cell .meta-row .meta-domain.domain-b {
+    background: #ff6b6b;
+}
+
+.dataset-meta-cell .meta-row .meta-type-badge {
+    display: inline-block;
+    padding: 1px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.dataset-meta-cell .meta-row .meta-type-badge.type-exam-a,
+.dataset-meta-cell .meta-row .meta-type-badge.type-sago-a {
+    background: #5c7cfa;
+}
+
+.dataset-meta-cell .meta-row .meta-type-badge.type-exam-b,
+.dataset-meta-cell .meta-row .meta-type-badge.type-sago-b {
+    background: #ff8787;
+}
+
+/* Bulk delete toolbar */
+.bulk-toolbar {
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.bulk-toolbar-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+
+/* Training confirm summary */
+.training-confirm-summary {
+    padding: 12px 16px;
+    background: #f1f3f5;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+/* ===== Metrics Modal ===== */
+
+/* Custom modal header */
+.metrics-modal-header {
+    padding-bottom: 12px;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 4px;
+}
+
+.metrics-modal-title {
+    font-size: 22px;
+    font-weight: 800;
+    color: #212529;
+    letter-spacing: -0.3px;
+}
+
+/* Section title */
+.metrics-section-title {
+    color: #495057;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Summary cards — big AUC */
+.metrics-summary-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.metrics-summary-card {
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    border: 1px solid #e9ecef;
+    background: #fff;
+    transition: box-shadow 0.15s;
+}
+
+.metrics-summary-card:hover {
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+
+.metrics-summary-card.stack {
+    border-left: 4px solid #228be6;
+}
+
+.metrics-summary-card.seq {
+    border-left: 4px solid #20c997;
+}
+
+.metrics-summary-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.metrics-summary-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}
+
+.metrics-summary-dot.stack { background: #228be6; }
+.metrics-summary-dot.seq { background: #20c997; }
+
+.metrics-summary-big {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #212529;
+    letter-spacing: -1px;
+}
+
+.metrics-summary-card.stack .metrics-summary-big { color: #1864ab; }
+.metrics-summary-card.seq .metrics-summary-big { color: #087f5b; }
+
+.metrics-summary-sub {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid #f1f3f5;
+    font-size: 13px;
+    color: #868e96;
+}
+
+.metrics-summary-sub strong {
+    color: #495057;
+    margin-left: 3px;
+}
+
+.metrics-summary-sep {
+    width: 1px;
+    height: 12px;
+    background: #dee2e6;
+}
+
+/* Detail section */
+.metrics-detail-section {
+    margin-bottom: 8px;
+}
+
+/* Ensemble grid (domain cards) */
+.metrics-ensemble-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.metrics-domain-card {
+    padding: 14px 16px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e9ecef;
+}
+
+/* Metric rows */
+.metrics-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    font-size: 13px;
+}
+
+.metric-label {
+    color: #868e96;
+}
+
+.metric-hint {
+    font-size: 11px;
+    font-weight: 400;
+    color: #adb5bd;
+    margin-left: 2px;
+}
+
+/* Column hints in model table */
+.metric-col-hint {
+    font-size: 10px;
+    font-weight: 400;
+    color: #adb5bd;
+}
+
+/* Version table clickable rows */
+.version-table tbody tr {
+    cursor: pointer;
+}
+
+.version-table tbody tr:hover {
+    background: #e7f5ff;
+}
+
+/* Model table font size */
+.metrics-detail-section table {
+    font-size: 13px;
+}
+
+/* Sortable table headers */
+.metrics-detail-section th[style*="cursor"] {
+    transition: background 0.15s;
+}
+
+.metrics-detail-section th[style*="cursor"]:hover {
+    background: #e7f5ff;
+}
+
+/* Confirm modal */
+.confirm-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 16px;
+}

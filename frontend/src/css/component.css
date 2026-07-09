@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+/* Error page */
+.ERROR {
+  width: 690px;
+  margin: 200px auto 0;
+}
+.ERROR h1 {
+  color: #222;
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+}
+.ERROR .box {
+  margin-top: 35px;
+  padding: 30px;
+  border: 1px solid #dde2e5;
+  border-radius: 25px;
+}
+.ERROR .box p {
+  display: flex;
+  min-height: 80px;
+  color: #666;
+  font-size: 24px;
+  font-weight: 400;
+  align-items: center;
+  justify-content: center;
+}
+.ERROR .box .btn_area {
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.btn_blue_h46 {
+  height: 46px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  line-height: 46px;
+  text-align: center;
+  background: #169bd5;
+}
+
+/* Form */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="image"],
+input[type="tel"] {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+
+/* for IE10 */
+input::placeholder {
+  color: #aaa;
+  opacity: 1; /* 파이어폭스에서 뿌옇게 나오는 현상을 방지하기 위한 css */
+}
+input::-webkit-input-placeholder {
+  color: #aaa;
+}
+/* IE */
+input:-ms-input-placeholder {
+  color: #aaa;
+}
+input[type="text"]::-ms-clear {
+  display: none;
+}
+/* Firefox */
+input:-mos-input-placeholder {
+  color: #aaa;
+}
+
+select {
+  font-family: "NotoSans", sans-serif;
+  font-weight: 400;
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  appearance: none;
+}
+select::-ms-expand {
+  display: none;
+}
+
+/* 리액트 관련 */
+.react-datepicker-wrapper,
+.react-datepicker__input-container {
+  display: inline-block;
+  vertical-align: top;
+  width: auto;
+}
+
+.react-datepicker__tab-loop {
+  display: inline-block;
+}
